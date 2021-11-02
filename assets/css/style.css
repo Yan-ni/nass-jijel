@@ -192,6 +192,7 @@ button[type=submit]:hover {
   height: 1382px;
   left: 532px;
   top: -59px;
+  z-index: -1;
 
 background: radial-gradient(52.35% 52.15% at 44.34% 47.88%, rgba(255, 255, 255, 0.075) 5.62%, rgba(196, 196, 196, 0) 100%);
 }
