@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Ostorah';
+  src:url('../fonts/Ostorah.ttf.woff') format('woff'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #020306;
+  /* background-image: url(../image/ramadan-backgorund.png);
+  background-repeat: no-repeat;
+  background-size: contain; */
+  color: #fff;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: Ostorah;
+  text-align: center;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+h2 {
+  padding: 10px;
+}
+
+
+/*  utility */
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.my-2 {
+  margin-block: 20px;
+}
+
+/* elements */
+.logo {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.burgerMenu {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.burgerMenu::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.burgerMenu::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.ramadan-background-img {
+  width: 100%;
+}
+
+.iftar {
+}
+
+.imsak {
+
+}
+
+.iftar > h2, .imsak > h2 {
+  text-align: center;
+  padding: 3px;
+}
+
+.hijriDate {
+  text-align: center;
+}
