@@ -221,9 +221,6 @@ setInterval(() => {
     seconds: d.getSeconds()
   });
 
-  // if(remaining.hours === 0 && remaining.minutes === 0 && remaining.seconds === 0)
-    // document.querySelector('.timeRemaining').classList.add('timesup');
-
   hours.textContent = intToStringof2(remaining.hours)
   minutes.textContent = intToStringof2(Math.abs(remaining.minutes))
   seconds.textContent = intToStringof2(Math.abs(remaining.seconds))
@@ -231,7 +228,11 @@ setInterval(() => {
 
 function timeSubtract(time1, time2)
 {
-  const time = { ...time1 };
+  const time = { 
+    hours: parseInt(time1.hours),
+    minutes: parseInt(time1.minutes),
+    seconds: parseInt(time1.seconds)
+   };
 
   if(time.hours < time2.hours)
   {
@@ -259,14 +260,14 @@ function timeSubtract(time1, time2)
   if(time1.seconds < time2.seconds)
   {
     --time.minutes;
-    time.seconds = (60 + parseInt(time.seconds)) - time2.seconds;
+    time.seconds = 60 + time.seconds - time2.seconds;
   } else {
     time.seconds = time.seconds - time2.seconds;
   }
   
   if(time1.minutes < time2.minutes) {
     --time.hours;
-    time.minutes = (60 + parseInt(time.minutes)) - time2.minutes;
+    time.minutes = 60 + time.minutes - time2.minutes;
   } else {
     time.minutes = time.minutes - time2.minutes;
   }
