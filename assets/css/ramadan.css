@@ -126,3 +126,34 @@ h2 {
 .hijriDate {
   text-align: center;
 }
+
+hr {
+  margin-block: 20px;
+  color: #eee;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+.timeRemaining {
+  font-size: 2rem;
+}
+
+.colon {
+  visibility: hidden;
+}
+
+.timesup > .colon {
+  animation: blinking linear 1600ms infinite;
+}
+
+@keyframes blinking {
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
