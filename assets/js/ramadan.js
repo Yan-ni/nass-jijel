@@ -1,6 +1,6 @@
 const date = new Date();
 
-const API_URI = `http://api.aladhan.com/v1/calendarByCity?city=Jijel&country=Algeria&method=4&month=${date.getMonth() +1}&year=${date.getFullYear()}`;
+const API_URI = `https://api.aladhan.com/v1/calendarByCity?city=Jijel&country=Algeria&method=4&month=${date.getMonth() +1}&year=${date.getFullYear()}`;
 
 function getTodayAdhanTimes()
 {
