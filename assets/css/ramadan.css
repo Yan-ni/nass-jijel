@@ -17,7 +17,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain; */
   color: #fff;
-  overflow: hidden;
   min-height: 100vh;
 }
 
@@ -155,5 +154,12 @@ hr {
 
   100% {
     visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  body {
+    width: 50%;
+    margin: 0 auto;
   }
 }
