@@ -171,7 +171,7 @@ async function displayTime()
   const imsakTimeEl = document.querySelector('.imsak > .time');
   const hijriDateEl = document.querySelector('.hijriDate');
 
-  const times = await getTodayAdhanTimes();
+  // const times = await getTodayAdhanTimes();
 
   const { iftar, imsak } = jsonTimes.find(time => time.day === parseInt(times.date.hijri.day));
 
@@ -187,29 +187,28 @@ async function displayTime()
 }
 
 
-displayTime();
-
-setInterval(() => {
-  const hoursEl = document.querySelector('.timeRemaining > .hours');
-  const minutesEl = document.querySelector('.timeRemaining > .minutes');
-  const secondsEl = document.querySelector('.timeRemaining > .seconds');
-
-  const date = new Date();
-
-  const [iftarHours, iftarMinutes] = iftarTime.split(':');
-  const iftarSeconds = '00';
-
-  const remaining = timeSubtract({
-    hours: parseInt(iftarHours),
-    minutes: parseInt(iftarMinutes),
-    seconds: parseInt(iftarSeconds)
-  }, {
-    hours: date.getHours(),
-    minutes: date.getMinutes(),
-    seconds: date.getSeconds()
-  });
-
-  hoursEl.textContent = intToStringof2(remaining.hours);
-  minutesEl.textContent = intToStringof2(Math.abs(remaining.minutes));
-  secondsEl.textContent = intToStringof2(Math.abs(remaining.seconds));
-}, 1000);
+displayTime()
+  then(() => setInterval(() => {
+    const hoursEl = document.querySelector('.timeRemaining > .hours');
+    const minutesEl = document.querySelector('.timeRemaining > .minutes');
+    const secondsEl = document.querySelector('.timeRemaining > .seconds');
+  
+    const date = new Date();
+  
+    const [iftarHours, iftarMinutes] = iftarTime.split(':');
+    const iftarSeconds = '00';
+  
+    const remaining = timeSubtract({
+      hours: parseInt(iftarHours),
+      minutes: parseInt(iftarMinutes),
+      seconds: parseInt(iftarSeconds)
+    }, {
+      hours: date.getHours(),
+      minutes: date.getMinutes(),
+      seconds: date.getSeconds()
+    });
+  
+    hoursEl.textContent = intToStringof2(remaining.hours);
+    minutesEl.textContent = intToStringof2(Math.abs(remaining.minutes));
+    secondsEl.textContent = intToStringof2(Math.abs(remaining.seconds));
+  }, 1000));
