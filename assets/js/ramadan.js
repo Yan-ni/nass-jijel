@@ -171,7 +171,7 @@ async function displayTime()
   const imsakTimeEl = document.querySelector('.imsak > .time');
   const hijriDateEl = document.querySelector('.hijriDate');
 
-  // const times = await getTodayAdhanTimes();
+  const times = await getTodayAdhanTimes();
 
   const { iftar, imsak } = jsonTimes.find(time => time.day === parseInt(times.date.hijri.day));
 
@@ -188,7 +188,7 @@ async function displayTime()
 
 
 displayTime()
-  then(() => setInterval(() => {
+  .then(() => setInterval(() => {
     const hoursEl = document.querySelector('.timeRemaining > .hours');
     const minutesEl = document.querySelector('.timeRemaining > .minutes');
     const secondsEl = document.querySelector('.timeRemaining > .seconds');

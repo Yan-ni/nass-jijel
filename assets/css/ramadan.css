@@ -16,6 +16,11 @@
   src: url('../fonts/rbfont.woff') format('woff'); 
 }
 
+@font-face {
+  font-family: 'Digital';
+  src: url('../fonts/digital.woff') format('woff'); 
+}
+
 body {
   background-color: #020306;
   color: #fff;
@@ -139,7 +144,8 @@ hr {
 }
 
 .timeRemaining {
-  font-size: 2rem;
+  font-family: 'Digital';
+  font-size: 3rem;
 }
 
 .colon {
