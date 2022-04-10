@@ -11,13 +11,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'RBFont';
+  src: url('../fonts/rbfont.woff') format('woff'); 
+}
+
 body {
   background-color: #020306;
-  /* background-image: url(../image/ramadan-backgorund.png);
-  background-repeat: no-repeat;
-  background-size: contain; */
   color: #fff;
   min-height: 100vh;
+  font-family: 'RBFont';
 }
 
 h1 {
